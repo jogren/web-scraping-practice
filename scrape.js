@@ -2,7 +2,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 const fetch = require("node-fetch");
 
-fetch('https://secondactfitnessmpls.com/', (error, response, html) => {
+request('https://secondactfitnessmpls.com/', (error, response, html) => {
   if(!error && response.statusCode == 200) {
     const $ = cheerio.load(html);
 

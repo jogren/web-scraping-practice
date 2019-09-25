@@ -21,7 +21,7 @@ request('https://secondactfitnessmpls.com/', (error, response, html) => {
         .find('.entry-meta a')
         .first()
         .text();
-      writeStream.write(`${title}, ${link},${category} \n`);
+      writeStream.write(`${title}, ${link}, ${category} \n`);
     });
     console.log('Scraping Done...')
   }
